@@ -1,15 +1,15 @@
 StateName,PNGFilename,TransitionText,NewState
-Relaxed,assets/relaxed.png,See a cute cat,Excited
-Relaxed,assets/relaxed.png,My roommates didn’t wash the dishes so I can't eat,Frustrated
-Angry,assets/angry.png,"Realize the person I was angry at does not care
-",Sad
-Angry,assets/angry.png,I do some breathing exercises,Relaxed
-Sad,assets/sad.png,i can't figure out why I'm crying,Frustrated
-Sad,assets/sad.png,"i have cried out all my tears
-",Relaxed
-Excited,assets/excited.png,"This assignment is not as easy as I thought it was
-",Frustrated
-Excited,assets/excited.png,"someone likes my best friend but the person i like
-",Angry
-Frustrated,assets/frustrated.png,I can't figure out a problem,Angry
-Frustrated,assets/frustrated.png,I figure out a solution,Excited
+Happy,assets/happy.png,Everyone at the party is joking around.,Silly
+Happy,assets/happy.png,The party you're at just ended and every one is going home.,Relaxed
+Relaxed,assets/relaxed.png,You're hanging out with friends and they all start joking around.,Silly
+Relaxed,assets/relaxed.png,You're relaxing at home and your puppy randomly pees on the floor.,Mad
+Surprised,assets/surprised.png,Your partner got you flowers for Valentine's Day.,Happy
+Surprised,assets/surprised.png,Your partner tells their friend they has no plans on Valentine's Day.,Mad
+Mad,assets/mad.png,Know exactly who you want to express your anger to.,Relaxed
+Mad,assets/mad.png,Not sure who to express your anger to.,Confused
+Silly,assets/silly.png,No one laughs at my joke.,Disappointed
+Silly,assets/silly.png,Everyone laughs at your joke.,Happy
+Confused,assets/confused.png,Your code passed all the tests.,Surprised
+Confused,assets/confused.png,Your code has a lot more bugs than before.,Disappointed
+Disappointed,assets/disappointed.png,The TV show is boring but then a main character dies.,Surprised
+Disappointed,assets/disappointed.png,Your puppy finally learns a new trick.,Happy

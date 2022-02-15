@@ -22,7 +22,7 @@ function setup() {
 
   // setup the state machine with callbacks
   simpleStateMachine.setup(setImage, setTransitionNames);
- }
+}
 
 
 // Draw code goes here
@@ -35,7 +35,7 @@ function draw() {
 // this is a callback, which we use to set our display image
 function setImage(imageFilename) {
   moodImage = loadImage(imageFilename);
-} 
+}
 
 // this is a callback, which we use to diplay next state labels
 function setTransitionNames(transitionArray) {
@@ -47,24 +47,24 @@ function keyPressed() {
   // forward one, check for overflow
   if (keyCode === RIGHT_ARROW) {
     selectedTransitionNum++;
-    if( selectedTransitionNum === transitions.length ) {
+    if (selectedTransitionNum === transitions.length) {
       selectedTransitionNum = 0;
     }
   }
-  
+
   // back one, check for underflow
-  if (keyCode === LEFT_ARROW ) {
+  if (keyCode === LEFT_ARROW) {
     selectedTransitionNum--;
-    if( selectedTransitionNum === -1 ) {
-      selectedTransitionNum = transitions.length -1;
-      if( selectedTransitionNum === -1 ) {
+    if (selectedTransitionNum === -1) {
+      selectedTransitionNum = transitions.length - 1;
+      if (selectedTransitionNum === -1) {
         console.log("error: transition array probably empty");
       }
     }
   }
 
   // Space or ENTER or RETURN will activate a sections
-  if( key === ' ' || keyCode === RETURN || keyCode === ENTER ) {
+  if (key === ' ' || keyCode === RETURN || keyCode === ENTER) {
     simpleStateMachine.newState(transitions[selectedTransitionNum]);
   }
 }
@@ -72,13 +72,13 @@ function keyPressed() {
 //==== MODIFY THIS CODE FOR UI =====/
 
 function drawBackground() {
-  background(0);
+  background(200);
 }
 
 function drawImage() {
-  if( moodImage !== undefined ) {
-    image(moodImage, width/2, height/2);
-  }  
+  if (moodImage !== undefined) {
+    image(moodImage, width / 2, height / 2);
+  }
 }
 
 function drawUI() {
@@ -86,13 +86,13 @@ function drawUI() {
   textAlign(LEFT);
   textSize(18);
 
-  for( let i = 0; i < transitions.length; i++ ) {
+  for (let i = 0; i < transitions.length; i++) {
     fill(255);
 
-    if( selectedTransitionNum === i ) {
-      fill(240,50,0);
+    if (selectedTransitionNum === i) {
+      fill(240, 50, 0);
     }
-    text( transitions[i], 100, (height - 100) + (i*30)  );
+    text(transitions[i], 100, (height - 100) + (i * 30));
   }
 
   pop();
