@@ -1,15 +1,29 @@
 StateName,PNGFilename,TransitionText,NewState
-Happy,assets/happy.png,Everyone at the party is joking around.,Silly
-Happy,assets/happy.png,The party you're at just ended and every one is going home.,Relaxed
+
 Relaxed,assets/relaxed.png,You're hanging out with friends and they all start joking around.,Silly
 Relaxed,assets/relaxed.png,You're relaxing at home and your puppy randomly pees on the floor.,Mad
-Surprised,assets/surprised.png,Your partner got you flowers for Valentine's Day.,Happy
+Relaxed,assets/relaxed.png,You're in class and your professor extends the project deadline.,Happy
+
+Surprised,assets/surprised.png,Your partner gets you a big boquet of flowers for Valentine's Days.,Happy
 Surprised,assets/surprised.png,Your partner tells their friend they has no plans on Valentine's Day.,Mad
-Mad,assets/mad.png,Know exactly who you want to express your anger to.,Relaxed
-Mad,assets/mad.png,Not sure who to express your anger to.,Confused
-Silly,assets/silly.png,No one laughs at my joke.,Disappointed
-Silly,assets/silly.png,Everyone laughs at your joke.,Happy
-Confused,assets/confused.png,Your code passed all the tests.,Surprised
-Confused,assets/confused.png,Your code has a lot more bugs than before.,Disappointed
-Disappointed,assets/disappointed.png,The TV show is boring but then a main character dies.,Surprised
-Disappointed,assets/disappointed.png,Your puppy finally learns a new trick.,Happy
+Surprised,assets/surprised,Your partner brings you to Mc Donalds for dinner on Valentine's Day.,Disappointed
+
+Mad,assets/mad.png,You know who you want to express your anger to and they're free.,Relaxed
+Mad,assets/mad.png,You know who you want to express your anger to but there not free.,Disappointed
+Mad,assets/mad.png,You don't have anyone to express your anger to because you have no friends.,Confused
+
+Silly,assets/silly.png,Everyone is laughing because they thought your joke was funny.,Happy
+Silly,assets/silly.png,No one's laughing because your joke wasn't funny to anyone.,Disappointed
+Silly,assets/silly.png,Someone tells you to "Be quiet" because they thought your joke was bad.,Mad
+
+Confused,assets/confused.png,You're coding and everything works after your first time running it.,Surprised
+Confused,assets/confused.png,You're trying to fix a bug in your code and you just mess it up even more.,Disappointed
+Confused,assets/confused.png,You're making slow but steady progress on your programming project.,Relaxed
+
+Disappointed,assets/disappointed.png,After trying for weeks your puppy finally understands a new trick.,Happy
+Disappointed,assets/disappointed.png,You go out to party with your friends to forget all your problems.,Silly
+Disappointed,assets/disappointed.png,The TV show you're watching is boring but then the main character dies.,Surprised
+
+Happy,assets/happy.png,You're at a party drinking with your friends and you get a little giggly.,Silly
+Happy,assets/happy.png,After a good time all the guests at your party start heading out.,Relaxed
+Happy,assets/happy.png,You're opening gifts at your birthday party an someone gets you something expensive.,Surprised

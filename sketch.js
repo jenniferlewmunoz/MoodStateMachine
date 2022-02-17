@@ -1,9 +1,7 @@
 /*******************************************************************************************************************
-    Moods Example
+    Mood State Machine
     by Scott Kildall
-
-    Uses the p5.SimpleStateMachine library. Check the README.md + source code documentation
-    The index.html needs to include the line:  <script src="p5.simpleStateManager.js"></script>
+    student Jennifer Lew Munoz
 *********************************************************************************************************************/
 
 var simpleStateMachine;           // the SimpleStateManager class
@@ -17,7 +15,7 @@ function preload() {
 
 // Setup code goes here
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(900, 600);
   imageMode(CENTER);
 
   // setup the state machine with callbacks
@@ -45,7 +43,7 @@ function setTransitionNames(transitionArray) {
 //==== KEYPRESSED ====/
 function keyPressed() {
   // forward one, check for overflow
-  if (keyCode === RIGHT_ARROW) {
+  if (keyCode === DOWN_ARROW) {
     selectedTransitionNum++;
     if (selectedTransitionNum === transitions.length) {
       selectedTransitionNum = 0;
@@ -53,7 +51,7 @@ function keyPressed() {
   }
 
   // back one, check for underflow
-  if (keyCode === LEFT_ARROW) {
+  if (keyCode === UP_ARROW) {
     selectedTransitionNum--;
     if (selectedTransitionNum === -1) {
       selectedTransitionNum = transitions.length - 1;
@@ -69,30 +67,83 @@ function keyPressed() {
   }
 }
 
-//==== MODIFY THIS CODE FOR UI =====/
-
 function drawBackground() {
-  background(200);
+
+  // Color Pallete
+  let lightBlue = color(187, 189, 246);
+  let blue = color(152, 147, 218);
+  let darkBlue = color(110, 110, 158);
+
+  // Cavnas & Shape colors
+  background(255);
+  fill(lightBlue);
+
+  // Top & Bottom rounded rectangle
+  stroke(darkBlue);
+  strokeWeight(10);
+  rect(150, 25, 600, 200, 60);
+  rect(150, 435, 600, 70, 60);
+
+  // Draw main rectangle (900, 600)
+  noStroke();
+  rect(100, 100, 700, 375);
+
+  // Draw side triangles
+  triangle(50, 100, 100, 100, 100, 480);
+  triangle(800, 100, 850, 100, 800, 480);
+
+  // Screws
+  fill(blue);
+  ellipse(85, 125, 20, 20);
+  ellipse(815, 125, 20, 20);
+  ellipse(125, 450, 20, 20);
+  ellipse(775, 450, 20, 20);
+
+  // Add text
+  fill(255);
+  textSize(47);
+  textStyle(BOLD);
+  text('Mood State Machine', 225, 90);
+  fill(255);
+  textSize(25);
+  text('Current Mood', 185, 170);
+  text('What is happening?', 485, 170);
+
+  // Outline
+  stroke(darkBlue);
+  strokeWeight(10);
+  line(50, 100, 150, 100);
+  line(50, 100, 100, 480);
+  line(100, 480, 150, 480);
+  line(750, 100, 850, 100);
+  line(850, 100, 800, 480);
+  line(800, 480, 750, 480);
+
+  // Middle line
+  fill(blue);
+  line(430, 150, 430, 440);
 }
 
 function drawImage() {
   if (moodImage !== undefined) {
-    image(moodImage, width / 2, height / 2);
+    image(moodImage, 280, 325);
   }
 }
 
 function drawUI() {
   push();
-  textAlign(LEFT);
+
+  textStyle(NORMAL);
   textSize(18);
+  noStroke();
 
   for (let i = 0; i < transitions.length; i++) {
     fill(255);
 
     if (selectedTransitionNum === i) {
-      fill(240, 50, 0);
+      fill(0);
     }
-    text(transitions[i], 100, (height - 100) + (i * 30));
+    text(transitions[i], 470, 210 + (i * 70), 320, 500);
   }
 
   pop();
