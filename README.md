@@ -1,10 +1,14 @@
 ## MoodStateMachine
-#### by Scott Kildall
-#### Last updated Jan 24 2022
+#### By: Scott Kildall
+#### Student: Jennifer Lew - Munoz
+#### Last updated Feb 16, 2022
 
 
 ### Overview
 This is a simple state machine that displays an image and a series of transitions that can lead to new states. It uses the p5.simpleStateManager.js library file, which does the heavy lifting: loading a CSV file with the various states and transitions in it.
+
+### Interactivity
+Use the UP and DOWN ARROWS on your keyboard to highlight which mood transition you'd like to undergo. Then, press the ENTER or RETURN key on your keyboard to select the mood transition you're currently highlighting to see which mood you transition to.
 
 ### Add to your index.html:
 
@@ -66,9 +70,3 @@ Based on the name of the transition, will send you to a new state.
 
  `simpleStateMachine.newState(transitions[selectedTransitionNum]);
  `
-### Technical Details
-
-
-You can use this as a template. Underneath the comments below, you can modify the UI elements.
-
-//==== MODIFY THIS CODE FOR UI =====/

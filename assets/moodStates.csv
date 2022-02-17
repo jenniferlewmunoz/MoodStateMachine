@@ -14,7 +14,7 @@ Mad,assets/mad.png,You don't have anyone to express your anger to because you ha
 
 Silly,assets/silly.png,Everyone is laughing because they thought your joke was funny.,Happy
 Silly,assets/silly.png,No one's laughing because your joke wasn't funny to anyone.,Disappointed
-Silly,assets/silly.png,Someone tells you to "Be quiet" because they thought your joke was bad.,Mad
+Silly,assets/silly.png,You decide to keep telling jokes even if they might not be as funny.,Brave
 
 Confused,assets/confused.png,You're coding and everything works after your first time running it.,Surprised
 Confused,assets/confused.png,You're trying to fix a bug in your code and you just mess it up even more.,Disappointed
@@ -27,3 +27,8 @@ Disappointed,assets/disappointed.png,The TV show you're watching is boring but t
 Happy,assets/happy.png,You're at a party drinking with your friends and you get a little giggly.,Silly
 Happy,assets/happy.png,After a good time all the guests at your party start heading out.,Relaxed
 Happy,assets/happy.png,You're opening gifts at your birthday party an someone gets you something expensive.,Surprised
+
+Brave,assets/brave.png,You decide to tell your crush you like them and they say they like you back.,Happy
+Brave,assets/brave.png,You decide to tell your crush you like them and they don't like you back.,Disappointed
+Brave,assets/brave.png,You decide to tell your crush you like them and they say they actually like your best friend.,Surprised
+
